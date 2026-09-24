@@ -1,2 +1,512 @@
-
-<!DOCTYPE html><html lang="vi" data-tsd-source="/src/routes/__root.tsx:8:60"><head data-tsd-source="/src/routes/__root.tsx:8:76"><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/src/assets/iuh-logo.png"/><link rel="stylesheet" href="/src/styles.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" data-precedence="default"/><link rel="stylesheet" href="/@tanstack-start/styles.css?routes=__root__%2C%2F" data-tanstack-router-dev-styles="true" data-precedence="default"/><title>Tổng quan vận hành — Thành Công Fleet</title><meta name="description" content="Tổng quan đội xe, bãi xe và sự cố vận hành nội bộ."/><meta property="og:title" content="Tổng quan vận hành — Thành Công Fleet"/><meta property="og:description" content="Tổng quan đội xe, bãi xe và sự cố vận hành nội bộ."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><link rel="modulepreload" href="/@id/virtual:tanstack-start-dev-client-entry"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" href="/favicon.ico"/></head><body data-tsd-source="/src/routes/__root.tsx:8:103"><div class="min-h-screen bg-background text-foreground" data-tsd-source="/src/components/fleet-ui.tsx:165:5"><aside class="fixed inset-y-0 left-0 z-30 flex w-64 flex-col bg-sidebar text-sidebar-foreground" data-tsd-source="/src/components/fleet-ui.tsx:167:7"><div class="flex h-20 items-center justify-center border-b border-sidebar-border px-5" data-tsd-source="/src/components/fleet-ui.tsx:169:9"><div class="flex items-center rounded-md bg-white p-2.5 shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:170:11"><img src="/src/assets/iuh-logo.png" alt="Industrial University of Ho Chi Minh City" class="h-9 w-auto" data-tsd-source="/src/components/fleet-ui.tsx:171:13"/></div></div><nav class="flex-1 space-y-1 px-3 py-6" data-tsd-source="/src/components/fleet-ui.tsx:180:9"><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition bg-sidebar-accent text-sidebar-accent-foreground shadow-nav" href="/" data-status="active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Tổng quan</span></a><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" href="/vehicles" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bus size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><path d="M8 6v6"></path><path d="M15 6v6"></path><path d="M2 12h19.6"></path><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path><circle cx="7" cy="18" r="2"></circle><path d="M9 18h5"></path><circle cx="16" cy="18" r="2"></circle></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Quản lý xe</span></a><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" href="/drivers" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Tài xế</span></a><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" href="/parking" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-parking size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><circle cx="12" cy="12" r="10"></circle><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Bãi xe</span></a><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" href="/incidents" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Sự cố</span><span class="ml-auto rounded-full bg-warning px-2 py-0.5 text-[10px] font-bold text-warning-foreground" data-tsd-source="/src/components/fleet-ui.tsx:199:17">2</span></a><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" href="/notifications" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Thông báo</span></a><a data-tsd-source="/src/components/fleet-ui.tsx:182:13" href="/activity-log" class="group flex h-11 items-center gap-3 rounded-md px-3 text-sm font-medium text-sidebar-muted transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:194:15"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg><span data-tsd-source="/src/components/fleet-ui.tsx:196:15">Nhật ký hoạt động</span></a></nav><div class="border-t border-sidebar-border p-4" data-tsd-source="/src/components/fleet-ui.tsx:208:9"><div class="rounded-md bg-sidebar-panel p-3 text-xs text-sidebar-muted" data-tsd-source="/src/components/fleet-ui.tsx:209:11"><div class="mb-2 flex items-center gap-2 font-semibold text-sidebar-foreground" data-tsd-source="/src/components/fleet-ui.tsx:210:13"><span class="size-2 rounded-full bg-success" data-tsd-source="/src/components/fleet-ui.tsx:211:15"></span>Hệ thống ổn định</div><div data-tsd-source="/src/components/fleet-ui.tsx:215:13">Camera AI: 8/8 hoạt động</div></div></div></aside><div class="ml-64 min-w-[960px]" data-tsd-source="/src/components/fleet-ui.tsx:221:7"><header class="fixed left-64 right-0 top-0 z-20 flex h-20 items-center justify-between border-b bg-surface/95 px-8 backdrop-blur" data-tsd-source="/src/components/fleet-ui.tsx:223:9"><div data-tsd-source="/src/components/fleet-ui.tsx:225:11"><p class="text-xs font-semibold uppercase tracking-[.14em] text-primary" data-tsd-source="/src/components/fleet-ui.tsx:226:13">Trung tâm vận hành</p><h1 class="font-display text-2xl font-bold" data-tsd-source="/src/components/fleet-ui.tsx:230:13">Tổng quan</h1></div><div class="flex items-center gap-5" data-tsd-source="/src/components/fleet-ui.tsx:236:11"><div class="relative w-64" data-tsd-source="/src/components/fleet-ui.tsx:238:13"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-3 top-2.5 size-4 text-muted-foreground" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:239:15"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><input class="flex h-9 w-full rounded-md border border-input px-3 py-1 text-base transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-muted pl-9 shadow-none" aria-label="Tìm kiếm toàn hệ thống" placeholder="Tìm biển số, tài xế..." data-tsd-source="/src/components/fleet-ui.tsx:241:15"/></div><a aria-label="Thông báo" data-tsd-source="/src/components/fleet-ui.tsx:249:13" href="/notifications" class="relative grid size-9 place-items-center rounded-md border bg-surface text-muted-foreground hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell size-[18px]" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:254:15"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg><span class="absolute -right-1 -top-1 grid size-5 place-items-center rounded-full bg-warning text-[10px] font-bold text-warning-foreground" data-tsd-source="/src/components/fleet-ui.tsx:257:17">2</span></a><div class="text-right" data-tsd-source="/src/components/fleet-ui.tsx:264:13"><p class="text-sm font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:265:15">Trần Thị Mai</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:267:15">Quản lý vận hành</p></div><div class="grid size-9 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground" data-tsd-source="/src/components/fleet-ui.tsx:273:13">TM</div><div class="w-40 border-l pl-5 text-xs text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:278:13"></div></div></header><main class="min-h-screen px-8 pb-10 pt-28" data-tsd-source="/src/components/fleet-ui.tsx:285:9"><!--$--><div class="space-y-6" data-tsd-source="/src/routes/index.tsx:7:86"><div class="flex items-end justify-between" data-tsd-source="/src/routes/index.tsx:7:113"><div data-tsd-source="/src/routes/index.tsx:7:161"><p class="text-sm text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:166">Theo dõi toàn bộ hoạt động đội xe trong ngày hôm nay.</p></div><a data-tsd-source="/src/routes/index.tsx:7:274" href="/parking" class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-semibold text-primary-foreground">Điều phối xe ra/vào</a></div><div class="grid grid-cols-4 gap-4" data-tsd-source="/src/routes/index.tsx:7:440"><div class="relative overflow-hidden rounded-lg border bg-surface p-5 shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:451:5"><div class="mb-5 grid size-10 place-items-center rounded-md metric-blue" data-tsd-source="/src/components/fleet-ui.tsx:452:7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bus size-5" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:455:9"><path d="M8 6v6"></path><path d="M15 6v6"></path><path d="M2 12h19.6"></path><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path><circle cx="7" cy="18" r="2"></circle><path d="M9 18h5"></path><circle cx="16" cy="18" r="2"></circle></svg></div><p class="text-sm text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:458:7">Tổng số xe</p><div class="mt-1 flex items-end justify-between" data-tsd-source="/src/components/fleet-ui.tsx:460:7"><p class="font-display text-3xl font-bold" data-tsd-source="/src/components/fleet-ui.tsx:461:9">7</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:463:9">Toàn đội xe</p></div></div><div class="relative overflow-hidden rounded-lg border bg-surface p-5 shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:451:5"><div class="mb-5 grid size-10 place-items-center rounded-md metric-yellow" data-tsd-source="/src/components/fleet-ui.tsx:452:7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-parking size-5" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:455:9"><circle cx="12" cy="12" r="10"></circle><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path></svg></div><p class="text-sm text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:458:7">Xe đang trong bãi</p><div class="mt-1 flex items-end justify-between" data-tsd-source="/src/components/fleet-ui.tsx:460:7"><p class="font-display text-3xl font-bold" data-tsd-source="/src/components/fleet-ui.tsx:461:9">3</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:463:9">43% đội xe</p></div></div><div class="relative overflow-hidden rounded-lg border bg-surface p-5 shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:451:5"><div class="mb-5 grid size-10 place-items-center rounded-md metric-green" data-tsd-source="/src/components/fleet-ui.tsx:452:7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-route size-5" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:455:9"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg></div><p class="text-sm text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:458:7">Xe đang hoạt động</p><div class="mt-1 flex items-end justify-between" data-tsd-source="/src/components/fleet-ui.tsx:460:7"><p class="font-display text-3xl font-bold" data-tsd-source="/src/components/fleet-ui.tsx:461:9">2</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:463:9">Đúng lịch trình</p></div></div><div class="relative overflow-hidden rounded-lg border bg-surface p-5 shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:451:5"><div class="mb-5 grid size-10 place-items-center rounded-md metric-red" data-tsd-source="/src/components/fleet-ui.tsx:452:7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-5" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:455:9"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></div><p class="text-sm text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:458:7">Xe đang gặp sự cố</p><div class="mt-1 flex items-end justify-between" data-tsd-source="/src/components/fleet-ui.tsx:460:7"><p class="font-display text-3xl font-bold" data-tsd-source="/src/components/fleet-ui.tsx:461:9">1</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:463:9">Cần kiểm tra</p></div></div></div><div class="grid grid-cols-[1.55fr_1fr] gap-6" data-tsd-source="/src/routes/index.tsx:7:1016"><section class="rounded-lg border bg-surface shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:331:5"><div class="flex h-14 items-center justify-between border-b px-5" data-tsd-source="/src/components/fleet-ui.tsx:332:7"><h2 class="font-display text-base font-bold" data-tsd-source="/src/components/fleet-ui.tsx:333:9">Sự cố cần xử lý</h2><a href="/incidents" class="text-xs font-semibold text-primary">Xem tất cả</a></div><div class="overflow-hidden" data-tsd-source="/src/components/fleet-ui.tsx:378:5"><table class="w-full text-left text-sm" data-tsd-source="/src/components/fleet-ui.tsx:379:7"><thead data-tsd-source="/src/components/fleet-ui.tsx:380:9"><tr class="bg-table-head text-[11px] uppercase tracking-[.08em] text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:381:11"><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Thời gian</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Biển số / Tài xế</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Loại lỗi</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Trạng thái</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15"></th></tr></thead><tbody class="divide-y" data-tsd-source="/src/components/fleet-ui.tsx:393:9"><tr class="hover:bg-muted/50" data-tsd-source="/src/routes/index.tsx:7:1327"><td class="px-5 py-4 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:1372">Hôm nay, 08:32</td><td class="px-5 py-4" data-tsd-source="/src/routes/index.tsx:7:1441"><p class="font-bold" data-tsd-source="/src/routes/index.tsx:7:1467">50H-246.80</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:1505">Lê Quốc Hùng</p></td><td class="max-w-44 px-5 py-4 text-xs" data-tsd-source="/src/routes/index.tsx:7:1569">Lỗi nhận diện khuôn mặt tài xế</td><td class="px-5 py-4" data-tsd-source="/src/routes/index.tsx:7:1637"><span class="badge badge-warning" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Chờ xử lý</span></td><td class="px-5 py-4" data-tsd-source="/src/routes/index.tsx:7:1699"><a data-tsd-source="/src/components/fleet-ui.tsx:414:5" href="/incidents/sc1" class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">Xử lý<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right size-3" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:420:7"><path d="m9 18 6-6-6-6"></path></svg></a></td></tr><tr class="hover:bg-muted/50" data-tsd-source="/src/routes/index.tsx:7:1327"><td class="px-5 py-4 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:1372">Hôm nay, 07:18</td><td class="px-5 py-4" data-tsd-source="/src/routes/index.tsx:7:1441"><p class="font-bold" data-tsd-source="/src/routes/index.tsx:7:1467">51A-123.45</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:1505">Nguyễn Văn An</p></td><td class="max-w-44 px-5 py-4 text-xs" data-tsd-source="/src/routes/index.tsx:7:1569">Lỗi nhận diện biển số</td><td class="px-5 py-4" data-tsd-source="/src/routes/index.tsx:7:1637"><span class="badge badge-warning" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Chờ xử lý</span></td><td class="px-5 py-4" data-tsd-source="/src/routes/index.tsx:7:1699"><a data-tsd-source="/src/components/fleet-ui.tsx:414:5" href="/incidents/sc2" class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">Xử lý<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right size-3" aria-hidden="true" data-tsd-source="/src/components/fleet-ui.tsx:420:7"><path d="m9 18 6-6-6-6"></path></svg></a></td></tr></tbody></table></div></section><section class="rounded-lg border bg-surface shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:331:5"><div class="flex h-14 items-center justify-between border-b px-5" data-tsd-source="/src/components/fleet-ui.tsx:332:7"><h2 class="font-display text-base font-bold" data-tsd-source="/src/components/fleet-ui.tsx:333:9">Tình trạng bãi xe</h2></div><div class="divide-y" data-tsd-source="/src/routes/index.tsx:7:1843"><div class="p-5" data-tsd-source="/src/routes/index.tsx:7:1964"><div class="flex justify-between" data-tsd-source="/src/routes/index.tsx:7:1998"><div data-tsd-source="/src/routes/index.tsx:7:2036"><p class="font-semibold" data-tsd-source="/src/routes/index.tsx:7:2041">Khu xe 16 chỗ</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2082">Xe 16 chỗ</p></div><span class="text-sm font-bold text-primary" data-tsd-source="/src/routes/index.tsx:7:2145">2<!-- -->/<!-- -->8</span></div><div class="my-3 h-1.5 rounded-full bg-muted" data-tsd-source="/src/routes/index.tsx:7:2223"><div class="h-full rounded-full bg-primary" style="width:25%" data-tsd-source="/src/routes/index.tsx:7:2273"></div></div><div class="flex justify-between text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2367"><span data-tsd-source="/src/routes/index.tsx:7:2435">Đang dùng: <b class="text-foreground" data-tsd-source="/src/routes/index.tsx:7:2452">2</b></span><span data-tsd-source="/src/routes/index.tsx:7:2500">Còn trống: <b class="text-success" data-tsd-source="/src/routes/index.tsx:7:2517">6</b></span></div></div><div class="p-5" data-tsd-source="/src/routes/index.tsx:7:1964"><div class="flex justify-between" data-tsd-source="/src/routes/index.tsx:7:1998"><div data-tsd-source="/src/routes/index.tsx:7:2036"><p class="font-semibold" data-tsd-source="/src/routes/index.tsx:7:2041">Khu xe tải</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2082">Xe tải</p></div><span class="text-sm font-bold text-primary" data-tsd-source="/src/routes/index.tsx:7:2145">2<!-- -->/<!-- -->8</span></div><div class="my-3 h-1.5 rounded-full bg-muted" data-tsd-source="/src/routes/index.tsx:7:2223"><div class="h-full rounded-full bg-primary" style="width:25%" data-tsd-source="/src/routes/index.tsx:7:2273"></div></div><div class="flex justify-between text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2367"><span data-tsd-source="/src/routes/index.tsx:7:2435">Đang dùng: <b class="text-foreground" data-tsd-source="/src/routes/index.tsx:7:2452">2</b></span><span data-tsd-source="/src/routes/index.tsx:7:2500">Còn trống: <b class="text-success" data-tsd-source="/src/routes/index.tsx:7:2517">6</b></span></div></div><div class="p-5" data-tsd-source="/src/routes/index.tsx:7:1964"><div class="flex justify-between" data-tsd-source="/src/routes/index.tsx:7:1998"><div data-tsd-source="/src/routes/index.tsx:7:2036"><p class="font-semibold" data-tsd-source="/src/routes/index.tsx:7:2041">Khu xe khác</p><p class="text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2082">Xe khác</p></div><span class="text-sm font-bold text-primary" data-tsd-source="/src/routes/index.tsx:7:2145">1<!-- -->/<!-- -->6</span></div><div class="my-3 h-1.5 rounded-full bg-muted" data-tsd-source="/src/routes/index.tsx:7:2223"><div class="h-full rounded-full bg-primary" style="width:16.666666666666664%" data-tsd-source="/src/routes/index.tsx:7:2273"></div></div><div class="flex justify-between text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2367"><span data-tsd-source="/src/routes/index.tsx:7:2435">Đang dùng: <b class="text-foreground" data-tsd-source="/src/routes/index.tsx:7:2452">1</b></span><span data-tsd-source="/src/routes/index.tsx:7:2500">Còn trống: <b class="text-success" data-tsd-source="/src/routes/index.tsx:7:2517">5</b></span></div></div></div></section></div><section class="rounded-lg border bg-surface shadow-panel" data-tsd-source="/src/components/fleet-ui.tsx:331:5"><div class="flex h-14 items-center justify-between border-b px-5" data-tsd-source="/src/components/fleet-ui.tsx:332:7"><h2 class="font-display text-base font-bold" data-tsd-source="/src/components/fleet-ui.tsx:333:9">Hoạt động gần đây</h2><a href="/activity-log" class="text-xs font-semibold text-primary">Xem nhật ký</a></div><div class="overflow-hidden" data-tsd-source="/src/components/fleet-ui.tsx:378:5"><table class="w-full text-left text-sm" data-tsd-source="/src/components/fleet-ui.tsx:379:7"><thead data-tsd-source="/src/components/fleet-ui.tsx:380:9"><tr class="bg-table-head text-[11px] uppercase tracking-[.08em] text-muted-foreground" data-tsd-source="/src/components/fleet-ui.tsx:381:11"><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Thời gian</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Phương tiện</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Tài xế</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Hoạt động</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Trạng thái</th><th class="px-5 py-3 font-semibold" data-tsd-source="/src/components/fleet-ui.tsx:383:15">Người thực hiện</th></tr></thead><tbody class="divide-y" data-tsd-source="/src/components/fleet-ui.tsx:393:9"><tr data-tsd-source="/src/routes/index.tsx:7:2869"><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2884">Hôm nay, 09:10</td><td class="px-5 py-3 font-bold" data-tsd-source="/src/routes/index.tsx:7:2953">50F-334.21</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3003">Đặng Gia Bảo</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3044">Xe quay lại bãi</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3085"><span class="badge badge-success" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Hoàn tất</span></td><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:3147">Hệ thống</td></tr><tr data-tsd-source="/src/routes/index.tsx:7:2869"><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2884">Hôm nay, 09:11</td><td class="px-5 py-3 font-bold" data-tsd-source="/src/routes/index.tsx:7:2953">50F-334.21</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3003">Đặng Gia Bảo</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3044">Xe được phân vị trí C-01</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3085"><span class="badge badge-success" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Hoàn tất</span></td><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:3147">Hệ thống</td></tr><tr data-tsd-source="/src/routes/index.tsx:7:2869"><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2884">Hôm nay, 08:32</td><td class="px-5 py-3 font-bold" data-tsd-source="/src/routes/index.tsx:7:2953">50H-246.80</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3003">Lê Quốc Hùng</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3044">Phát hiện lỗi nhận diện</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3085"><span class="badge badge-warning" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Chờ xử lý</span></td><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:3147">AI Camera 02</td></tr><tr data-tsd-source="/src/routes/index.tsx:7:2869"><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2884">Hôm nay, 08:16</td><td class="px-5 py-3 font-bold" data-tsd-source="/src/routes/index.tsx:7:2953">51G-135.79</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3003">Phạm Hoàng Nam</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3044">Xe vào bãi</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3085"><span class="badge badge-success" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Hoàn tất</span></td><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:3147">Hệ thống</td></tr><tr data-tsd-source="/src/routes/index.tsx:7:2869"><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2884">Hôm nay, 08:02</td><td class="px-5 py-3 font-bold" data-tsd-source="/src/routes/index.tsx:7:2953">51A-123.45</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3003">Nguyễn Văn An</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3044">Xe được phân vị trí A-05</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3085"><span class="badge badge-success" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Hoàn tất</span></td><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:3147">Hệ thống</td></tr><tr data-tsd-source="/src/routes/index.tsx:7:2869"><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:2884">Hôm nay, 07:45</td><td class="px-5 py-3 font-bold" data-tsd-source="/src/routes/index.tsx:7:2953">51B-678.90</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3003">Trần Minh Đức</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3044">Xe rời bãi</td><td class="px-5 py-3" data-tsd-source="/src/routes/index.tsx:7:3085"><span class="badge badge-success" data-tsd-source="/src/components/fleet-ui.tsx:363:5"><span class="size-1.5 rounded-full bg-current" data-tsd-source="/src/components/fleet-ui.tsx:364:7"></span>Hoàn tất</span></td><td class="px-5 py-3 text-xs text-muted-foreground" data-tsd-source="/src/routes/index.tsx:7:3147">Hệ thống</td></tr></tbody></table></div></section></div><script>(function(a,f){let l;try{l=JSON.parse(sessionStorage.getItem(a)||"{}")}catch{return}const n=l?.[f||history.state?.__TSR_key];let c=!1;for(const t in n){const e=n[t],o=e?.scrollX,s=e?.scrollY;if(Number.isFinite(o)&&Number.isFinite(s)){if(t==="window")scrollTo(o,s),c=!0;else if(t)try{const r=document.querySelector(t);r&&(r.scrollLeft=o,r.scrollTop=s)}catch{}}}if(c)return;const i=location.hash.slice(1);if(i){const t=history.state?.__hashScrollIntoViewOptions??!0;if(t){const e=document.getElementById(i);e&&e.scrollIntoView(t)}return}scrollTo(0,0)})("tsr-scroll-restoration-v1_3");document.currentScript.remove()</script><!--/$--></main></div></div><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/@id/virtual:tanstack-start-dev-client-entry"],scripts:$R[5]=[$R[6]={attrs:$R[7]={type:"module",async:!0,src:"/@id/virtual:tanstack-start-dev-client-entry"}}],css:$R[8]=[$R[9]={href:"/@tanstack-start/styles.css?routes=__root__%2C%2F","data-tanstack-router-dev-styles":!0}]}}},matches:$R[10]=[$R[11]={i:"__root__",u:1790215974217,s:"success",ssr:!0},$R[12]={i:"",u:1790215974217,s:"success",ssr:!0}],lastMatchId:""})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script type="module" async="" src="/@id/virtual:tanstack-start-dev-client-entry"></script></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Tổng quan vận hành — Thành Công Fleet
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <aside class="sidebar">
+   <div class="logo-wrap">
+    <div class="logo-box">
+     <img alt="Industrial University of Ho Chi Minh City" src="data:image/png;base64,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"/>
+    </div>
+   </div>
+   <nav class="nav">
+    <a class="nav-item active" data-page="dashboard" href="#dashboard">
+     <span class="icon">
+      ▦
+     </span>
+     Tổng quan
+    </a>
+    <a class="nav-item" data-page="vehicles" href="#vehicles">
+     <span class="icon">
+      ▣
+     </span>
+     Quản lý xe
+    </a>
+    <a class="nav-item" data-page="drivers" href="#drivers">
+     <span class="icon">
+      ♙
+     </span>
+     Tài xế
+    </a>
+    <a class="nav-item" data-page="parking" href="#parking">
+     <span class="icon">
+      ▤
+     </span>
+     Bãi xe
+    </a>
+    <a class="nav-item" data-page="incidents" href="#incidents">
+     <span class="icon">
+      △
+     </span>
+     Sự cố
+     
+    </a>
+    <a class="nav-item" data-page="notifications" href="#notifications">
+     <span class="icon">
+      ♧
+     </span>
+     Thông báo
+    </a>
+    <a class="nav-item" data-page="activity" href="#activity-log">
+     <span class="icon">
+      ◴
+     </span>
+     Nhật ký hoạt động
+    </a>
+   </nav>
+   <div class="system-status">
+    <div class="status-box">
+     <div class="status-title">
+      <span class="dot green">
+      </span>
+      Hệ thống ổn định
+     </div>
+     Camera AI: 3/3 hoạt động
+    </div>
+   </div>
+  </aside>
+  <div class="main-shell">
+   <header class="header">
+    <div>
+     <p class="eyebrow" id="eyebrow">
+      TRUNG TÂM VẬN HÀNH
+     </p>
+     <h1 id="page-title">
+      Tổng quan
+     </h1>
+    </div>
+    <div class="header-actions">
+     <div class="search">
+      <span>
+       ⌕
+      </span>
+      <input id="search" placeholder="Tìm biển số, tài xế..."/>
+     </div>
+     <button class="bell" id="bell">
+      ♧
+      
+     </button>
+     <div class="user">
+      <b>
+       Nhóm 3
+      </b>
+      <small>
+       Quản lý vận hành
+      </small>
+     </div>
+     <div class="avatar">
+      N3
+     </div>
+     <div class="clock" id="clock">
+     </div>
+    </div>
+   </header>
+   <main class="content">
+    <section class="page active-page" id="dashboard">
+     <div class="intro">
+      <p>
+       Theo dõi toàn bộ hoạt động đội xe trong ngày hôm nay.
+      </p>
+      <button class="primary" id="dispatch">
+       Điều phối xe ra/vào
+      </button>
+     </div>
+     <div class="metrics">
+      <div class="metric">
+       <div>
+        <span>
+         Tổng số xe
+        </span>
+        <strong>
+         3
+        </strong>
+        <small>
+         Toàn đội xe
+        </small>
+       </div>
+       <div class="metric-icon blue">
+        ▣
+       </div>
+      </div>
+      <div class="metric">
+       <div>
+        <span>
+         Xe đang trong bãi
+        </span>
+        <strong>
+         3
+        </strong>
+        <small>
+         100% đội xe
+        </small>
+       </div>
+       <div class="metric-icon yellow">
+        ▤
+       </div>
+      </div>
+      <div class="metric">
+       <div>
+        <span>
+         Xe đang hoạt động
+        </span>
+        <strong>
+         0
+        </strong>
+        <small>
+         Đúng lịch trình
+        </small>
+       </div>
+       <div class="metric-icon green">
+        ↗
+       </div>
+      </div>
+      <div class="metric">
+       <div>
+        <span>
+         Xe đang gặp sự cố
+        </span>
+        <strong>
+         0
+        </strong>
+        <small>
+         Cần kiểm tra
+        </small>
+       </div>
+       <div class="metric-icon red">
+        △
+       </div>
+      </div>
+     </div>
+     <div class="two-col">
+      <section class="panel">
+       <div class="panel-head">
+        <h2>
+         Sự cố cần xử lý
+        </h2>
+        <a data-page="incidents" href="#incidents">
+         Xem tất cả
+        </a>
+       </div>
+       <div class="table-wrap">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Thời gian
+           </th>
+           <th>
+            Biển số / Tài xế
+           </th>
+           <th>
+            Loại lỗi
+           </th>
+           <th>
+            Trạng thái
+           </th>
+           <th>
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <b>
+            </b>
+            <small>
+            </small>
+           </td>
+           <td>
+           </td>
+           <td>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </section>
+      <section class="panel">
+       <div class="panel-head">
+        <h2>
+         Tình trạng bãi xe
+        </h2>
+       </div>
+       <div class="zones">
+        <div class="zone">
+         <div class="zone-top">
+          <div>
+           <b>
+            Khu xe
+           </b>
+           <small>
+            Xe
+           </small>
+          </div>
+          <strong>
+           3/3
+          </strong>
+         </div>
+         <div class="progress">
+          <i style="width:100%">
+          </i>
+         </div>
+         <div class="zone-bottom">
+          <span>
+           Đang dùng:
+           <b>
+            3
+           </b>
+          </span>
+          <span>
+           Còn trống:
+           <b class="success-text">
+            0
+           </b>
+          </span>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+     <section class="panel activity-panel">
+      <div class="panel-head">
+       <h2>
+        Hoạt động gần đây
+       </h2>
+       <a data-page="activity" href="#activity-log">
+        Xem nhật ký
+       </a>
+      </div>
+      <div class="table-wrap">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Thời gian
+          </th>
+          <th>
+           Phương tiện
+          </th>
+          <th>
+           Tài xế
+          </th>
+          <th>
+           Hoạt động
+          </th>
+          <th>
+           Trạng thái
+          </th>
+          <th>
+           Người thực hiện
+          </th>
+         </tr>
+        </thead>
+        
+        </tbody>
+       </table>
+      </div>
+     </section>
+    </section>
+    <section class="page" id="vehicles">
+     <div class="page-card">
+      <h2>
+       Quản lý xe
+      </h2>
+      <p>
+       Danh sách đội xe của hệ thống.
+      </p>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Biển số
+         </th>
+         <th>
+          Loại xe
+         </th>
+         <th>
+          Tài xế
+         </th>
+         <th>
+          Trạng thái
+         </th>
+         <th>
+          Vị trí
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section class="page" id="drivers">
+     <div class="page-card">
+      <h2>
+       Tài xế
+      </h2>
+      <p>
+       Danh sách tài xế và xe được phân công.
+      </p>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Mã
+         </th>
+         <th>
+          Họ tên
+         </th>
+         <th>
+          Số điện thoại
+         </th>
+         <th>
+          Trạng thái
+         </th>
+         <th>
+          Xe
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section class="page" id="parking">
+     <div class="page-card">
+      <h2>
+       Bãi xe
+      </h2>
+      <p>
+       Tình trạng vị trí đỗ hiện tại.
+      </p>
+      <div class="parking-grid">
+       <div class="parking-card">
+        
+        <b>
+         Khu xe 
+        </b>
+        <span>
+         3/3  vị trí đang dùng
+        </span>
+        <div class="progress">
+         <i style="width:100%">
+         </i>
+        </div>
+        <strong>
+         0 vị trí trống     
+        </strong>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="page" id="incidents">
+     <div class="page-card">
+      <h2>
+       Sự cố
+      </h2>
+      <p>
+       Không có sự cố
+      </p>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Thời gian
+         </th>
+         <th>
+          Xe
+         </th>
+         <th>
+          Tài xế
+         </th>
+         <th>
+          Lỗi
+         </th>
+         <th>
+          Trạng thái
+         </th>
+         <th>
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section class="page" id="notifications">
+     <div class="page-card">
+      <h2>
+       Thông báo
+      </h2>
+      <div class="notice">
+      </div>
+     </div>
+    </section>
+    <section class="page" id="activity-log">
+     <div class="page-card">
+      <h2>
+       Nhật ký hoạt động
+      </h2>
+      <p>
+       Lịch sử hoạt động hệ thống.
+      </p>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Thời gian
+         </th>
+         <th>
+          Phương tiện
+         </th>
+         <th>
+          Tài xế
+         </th>
+         <th>
+          Hoạt động
+         </th>
+         <th>
+          Trạng thái
+         </th>
+         <th>
+          Người thực hiện
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div class="toast" id="toast">
+  </div>
+  <script>
+   const pages={dashboard:['Trung tâm vận hành','Tổng quan'],vehicles:['Đội xe','Quản lý xe'],drivers:['Nhân sự vận hành','Tài xế'],parking:['Vận hành bãi','Bãi xe'],incidents:['AI & An toàn','Sự cố'],notifications:['Trung tâm thông báo','Thông báo'],activity:['Lịch sử hệ thống','Nhật ký hoạt động']};
+function showPage(name){name=name||'dashboard';const id=name==='activity'?'activity-log':name;document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active-page',p.id===id));document.querySelectorAll('.nav-item').forEach(a=>a.classList.toggle('active',a.dataset.page===name));const p=pages[name]||pages.dashboard;document.getElementById('eyebrow').textContent=p[0].toUpperCase();document.getElementById('page-title').textContent=p[1];window.scrollTo(0,0)}
+document.querySelectorAll('[data-page]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const n=a.dataset.page;location.hash=n;showPage(n)}));window.addEventListener('hashchange',()=>showPage(location.hash.replace('#','')||'dashboard'));showPage(location.hash.replace('#','')||'dashboard');
+function clock(){document.getElementById('clock').textContent=new Intl.DateTimeFormat('vi-VN',{weekday:'short',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date())}clock();setInterval(clock,30000);
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),3000)}
+document.getElementById('dispatch').onclick=()=>{location.hash='parking';showPage('parking');toast('Đã mở khu vực điều phối bãi xe')};document.getElementById('bell').onclick=()=>{location.hash='notifications';showPage('notifications')};document.querySelectorAll('[data-action="process"]').forEach(b=>b.onclick=()=>toast('Đã mở yêu cầu xử lý sự cố'));document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.toLowerCase().trim();document.querySelectorAll('tbody tr').forEach(r=>r.style.display=!q||r.textContent.toLowerCase().includes(q)?'':'none')});
+  </script>
+ </body>
+</html>
